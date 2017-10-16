@@ -1,2 +1,6 @@
 vendor
 composer.lock
+.idea
+.rmt.yml
+RMT
+token.txt
