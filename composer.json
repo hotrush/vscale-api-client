@@ -8,9 +8,7 @@
             "email": "johny64@gmail.com"
         }
     ],
-    "require": {
-        "guzzlehttp/guzzle": "^6.3"
-    },
+    "require": {},
     "suggest": {
         "guzzlehttp/guzzle": "To use GuzzleHttpAdapter, require guzzlehttp/guzzle:^6.0"
     },

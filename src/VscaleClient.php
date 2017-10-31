@@ -3,6 +3,7 @@
 namespace Hotrush\Vscale;
 
 use Hotrush\Vscale\Adapter\AdapterInterface;
+use Hotrush\Vscale\Api\Account;
 use Hotrush\Vscale\Api\Server;
 use Hotrush\Vscale\Api\SshKey;
 
@@ -43,5 +44,16 @@ class VscaleClient
     public function server()
     {
         return new Server($this->adapter);
+    }
+
+    /**
+     * Account details
+     * https://developers.vscale.io/documentation/api/v1/#api-Account
+     *
+     * @return Account
+     */
+    public function account()
+    {
+        return new Account($this->adapter);
     }
 }
