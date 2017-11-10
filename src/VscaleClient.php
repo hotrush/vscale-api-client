@@ -4,6 +4,7 @@ namespace Hotrush\Vscale;
 
 use Hotrush\Vscale\Adapter\AdapterInterface;
 use Hotrush\Vscale\Api\Account;
+use Hotrush\Vscale\Api\Backup;
 use Hotrush\Vscale\Api\Server;
 use Hotrush\Vscale\Api\SshKey;
 
@@ -55,5 +56,16 @@ class VscaleClient
     public function account()
     {
         return new Account($this->adapter);
+    }
+
+    /**
+     * Backups info
+     * https://developers.vscale.io/documentation/api/v1/#api-Backups
+     *
+     * @return Backup
+     */
+    public function backup()
+    {
+        return new Backup($this->adapter);
     }
 }
