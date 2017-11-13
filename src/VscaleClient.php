@@ -6,6 +6,7 @@ use Hotrush\Vscale\Adapter\AdapterInterface;
 use Hotrush\Vscale\Api\Account;
 use Hotrush\Vscale\Api\Background;
 use Hotrush\Vscale\Api\Backup;
+use Hotrush\Vscale\Api\Configuration;
 use Hotrush\Vscale\Api\Server;
 use Hotrush\Vscale\Api\SshKey;
 
@@ -79,5 +80,16 @@ class VscaleClient
     public function background()
     {
         return new Background($this->adapter);
+    }
+
+    /**
+     * Configurations and plans
+     * https://developers.vscale.io/documentation/api/v1/#api-Configurations
+     *
+     * @return Configuration
+     */
+    public function configuration()
+    {
+        return new Configuration($this->adapter);
     }
 }
