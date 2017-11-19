@@ -9,6 +9,7 @@ use Hotrush\Vscale\Api\Backup;
 use Hotrush\Vscale\Api\Configuration;
 use Hotrush\Vscale\Api\Server;
 use Hotrush\Vscale\Api\SshKey;
+use Hotrush\Vscale\Api\Tag;
 
 class VscaleClient
 {
@@ -91,5 +92,16 @@ class VscaleClient
     public function configuration()
     {
         return new Configuration($this->adapter);
+    }
+
+    /**
+     * Server's tags
+     * https://developers.vscale.io/documentation/api/v1/#api-ServerTags
+     *
+     * @return Tag
+     */
+    public function tag()
+    {
+        return new Tag($this->adapter);
     }
 }

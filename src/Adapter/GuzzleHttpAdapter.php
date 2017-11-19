@@ -71,6 +71,7 @@ class GuzzleHttpAdapter extends AbstractAdapter
             return $this->handleError($e);
         }
     }
+
     /**
      * {@inheritdoc}
      */
@@ -82,6 +83,24 @@ class GuzzleHttpAdapter extends AbstractAdapter
 
         try {
             $response = $this->client->post($url, $options);
+
+            return json_decode($response->getBody(), true);
+        } catch (RequestException $e) {
+            return $this->handleError($e);
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function put($url, array $args)
+    {
+        $options = [
+            'json' => $args,
+        ];
+
+        try {
+            $response = $this->client->put($url, $options);
 
             return json_decode($response->getBody(), true);
         } catch (RequestException $e) {

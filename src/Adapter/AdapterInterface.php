@@ -8,6 +8,8 @@ interface AdapterInterface
 
     public function post($url, array $args);
 
+    public function put($url, array $args);
+
     public function delete($url, array $args = []);
 
     public function patch($url, array $args = []);
