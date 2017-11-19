@@ -3,6 +3,7 @@ VERSION 0  INITIAL RELEASE
 ==========================
 
    Version 0.1 - Initial release
+      20/11/2017 01:11  0.1.5  tags interface / tests bootstrapped
       14/11/2017 00:18  0.1.4  configurations and plans interfaces
       13/11/2017 23:38  0.1.3  background interface added
       10/11/2017 18:43  0.1.2  backups interfce
